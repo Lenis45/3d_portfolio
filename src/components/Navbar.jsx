@@ -8,6 +8,23 @@ import { logo, menu, close } from '../assets';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+  
+// прокрутка назад принажатии на или имя
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     // место положение yfvbar и стиль внутри него
     <nav 
@@ -23,7 +40,7 @@ const Navbar = () => {
           {/* создаём название navbar и вставляем пикчу */}
           <img src={logo} alt="logo"  className='w-9 h-9 object-contain'/>
           <p className='text-white text-[18px] font-bold cursor-pointer'> 
-          Андрей <span className='sm:block hidden'>| JavaScript Developer</span></p> 
+          Андрей &nbsp; <span className='sm:block hidden'>| JScript Developer</span></p> 
         </Link>
         {/* список вкладок и их функции со стилями */}
         <ul className='list-none hidden sm:flex flex-row gap-10'>
