@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('');
   const [scrolled, setScrolled] = useState(false);
-  
+
 // прокрутка назад принажатии на или имя
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    // место положение yfvbar и стиль внутри него
+    // место положение navbar и стиль внутри него
     <nav 
     className={`${styles.paddingX}} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7x1 mx-auto'>
