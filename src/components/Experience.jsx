@@ -12,6 +12,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
+// создание блоков с опытом работы в компании
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -55,7 +56,7 @@ const ExperienceCard = ({ experience }) => {
     </VerticalTimelineElement>
   );
 };
-
+// раздел опыта работы
 const Experience = () => {
   return (
     <>
