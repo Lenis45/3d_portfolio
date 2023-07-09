@@ -8,6 +8,8 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+
+// карта проекта с его описание и используемыми в нём технологиями
 const ProjectCard = ({
   index,
   name,
@@ -67,12 +69,13 @@ const ProjectCard = ({
   );
 };
 
+// создаём блок с информацией о работе
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>Мои работа</p>
+        <h2 className={`${styles.sectionHeadText}`}>Проекты.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -80,11 +83,11 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Следующие проекты демонстрируют мои навыки и опыт через
+          реальные примеры моих работ. Каждый проект кратко описан с
+          ссылки на репозитории кода и живые демонстрации в нем. Это отражает мой
+          умение решать сложные задачи, работать с разными технологиями,
+          и эффективно управлять проектами.
         </motion.p>
       </div>
 
