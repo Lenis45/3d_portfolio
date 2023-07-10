@@ -1,5 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
-
+// ссздание анимации загрузки
 const CanvasLoader = () => {
   const { progress } = useProgress();
   return (

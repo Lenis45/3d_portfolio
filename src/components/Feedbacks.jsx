@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
+// создание карточки с отзывами
 const FeedbackCard = ({
   index,
   testimonial,
@@ -43,7 +44,7 @@ const FeedbackCard = ({
   </motion.div>
 );
 
-
+// объединение всего в один компонент с отзывом
 const Feedbacks = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
